@@ -1,0 +1,5 @@
+C:\Work\SignalRSelfHostedPOC\POC.Service\bin\Debug\POC.Service.dll
+C:\Work\SignalRSelfHostedPOC\POC.Service\bin\Debug\POC.Service.pdb
+C:\Work\SignalRSelfHostedPOC\POC.Service\obj\Debug\POC.Service.dll
+C:\Work\SignalRSelfHostedPOC\POC.Service\obj\Debug\POC.Service.pdb
+C:\Work\SignalRSelfHostedPOC\POC.Service\obj\Debug\POC.Service.csprojResolveAssemblyReference.cache

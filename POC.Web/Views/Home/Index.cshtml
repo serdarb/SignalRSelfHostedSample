@@ -1,0 +1,42 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>signalr sample</title>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript" src="~/s/js/jquery.signalR-1.0.0-rc2.min.js"></script>
+    <script type="text/javascript" src="http://localhost:8081/signalr/hubs"></script>
+    <script type="text/javascript">
+        (function () {
+
+            jQuery.support.cors = true;
+
+            var con = $.connection.hub;
+            con.url = "http://localhost:8081/signalr";
+
+            var myworkhub = con.createHubProxy('workhub');
+
+            con.start(function () {
+                console.log('connection started!');
+            }).done(function () {
+                console.log('done!');
+
+                myworkhub.invoke('DoWork', '1', 'test');
+            });
+
+            myworkhub.client.addMessage = function (msg) {
+                console.log(msg);
+
+                $('#messages').append('<li>' + msg + '</li>');
+            };
+
+        })();
+
+    </script>
+</head>
+<body>
+    <ul id="messages">
+    </ul>
+</body>
+</html>

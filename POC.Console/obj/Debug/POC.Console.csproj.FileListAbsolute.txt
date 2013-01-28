@@ -1,0 +1,1 @@
+C:\Work\SignalRSelfHostedPOC\POC.Console\obj\Debug\POC.Console.csprojResolveAssemblyReference.cache
