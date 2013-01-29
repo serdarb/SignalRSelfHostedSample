@@ -10,6 +10,8 @@
     <script type="text/javascript">
         (function () {
 
+            var token = 'token1';
+            
             jQuery.support.cors = true;
 
             var con = $.connection.hub;
@@ -21,8 +23,8 @@
                 console.log('connection started!');
             }).done(function () {
                 console.log('done!');
-
-                myworkhub.invoke('DoWork', '1', 'test');
+                
+                myworkhub.invoke('DoWork', 'user1', token, 'another test');
             });
 
             myworkhub.client.addMessage = function (msg) {
